@@ -26,6 +26,8 @@ How-To
 # Install the dependencies
 
     sudo apt-get install openjdk-7-jdk maven2 bluez-utils libbluetooth-dev
+    wget --trust-server-name http://downloads.sourceforge.net/project/motej/motej/motej%200.9/motej-library-0.9-bin.zip -O /tmp/motej-library.zip && cd /tmp/ && unzip motej-library.zip
+    sudo mvn install:install-file -DgroupId=motej -DartifactId=motej-library -Dversion=0.9 -Dpackaging=jar -Dfile=/tmp/motej-library-0.9/motej-library-0.9.jar
 
 # Install last version of motecontroller
 
