@@ -25,17 +25,10 @@ How-To
 
 # Install the dependencies
 
-    sudo apt-get install bluez-utils libbluetooth-dev maven2
+    sudo apt-get install openjdk-7-jdk maven2 bluez-utils libbluetooth-dev
 
-# Get the last version of master branch
+# Install last version of motecontroller
 
-    cd ~
-    wget https://github.com/kktuax/motecontroller/archive/master.zip
-    unzip master.zip
-    
-# Create the java package
-
-    cd ~/motecontroller-master
-    mvn package
-    
-    
+    wget https://raw.github.com/kktuax/motecontroller/master/install.sh -O /tmp/motecontroller-install.sh
+    chmod +x /tmp/motecontroller-install.sh
+    sudo /tmp/motecontroller-install.sh
