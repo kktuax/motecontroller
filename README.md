@@ -69,3 +69,27 @@ We can define as much applications as we want. For example we could create a sec
       </applicationCommands>
     </applicationController>
 
+In a simillar way, we can define a response to a combination of buttons. So, let's say we want to shutdown the machine when we hit A + B + A. We would define a file in ~/.motecontroller/combos/shutdown.xml looking like:
+
+    <comboController>
+      <name>shutdown</name>
+      <comboElements>A, B, A</comboElements>
+      <command>sudo shutdown -h now</command>
+    </comboController>
+
+# Using motecontroller
+
+After the installation, we can launch the motecontroller by running:
+
+    motecontroller
+    
+When the application starts it scans the configuration directory searching for controlled applications. If you change something in this directory, you will need to restart motecontroller for it to refresh the changes.
+
+We must synchronize our wiimote with the motecontroller. Yo can perform this opperation by:
+
+ * Clicking on the Synchronize button
+ * Push buttons 1 & 2 in your wiimote.
+ * If synchronization was successful the syncronize button will now have the text "Synchronized OK" and the first led in your wiimote will be on.
+ 
+Now you can select with your mouse what application you want to control and start playing with your wiimote :)
+
