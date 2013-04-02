@@ -24,10 +24,8 @@ How-To
 # Install the dependencies
 
     sudo apt-get install openjdk-7-jdk maven2 bluez-utils libbluetooth-dev
-    wget --trust-server-name http://downloads.sourceforge.net/project/motej/motej/motej%200.9/motej-library-0.9-bin.zip -O /tmp/motej-library.zip && cd /tmp/ && unzip motej-library.zip
-    sudo mvn install:install-file -DgroupId=motej -DartifactId=motej-library -Dversion=0.9 -Dpackaging=jar -Dfile=/tmp/motej-library-0.9/motej-library-0.9.jar
 
-# Install last version of motecontroller
+# Install the last version of motecontroller
 
     wget https://raw.github.com/kktuax/motecontroller/master/install.sh -O /tmp/motecontroller-install.sh
     chmod +x /tmp/motecontroller-install.sh
@@ -85,11 +83,11 @@ After the installation, we can launch the motecontroller by running:
     
 When the application starts it scans the configuration directory searching for controlled applications. If you change something in this directory, you will need to restart motecontroller for it to refresh the changes.
 
-We must synchronize our wiimote with the motecontroller. Yo can perform this opperation by:
+We must synchronize our wiimote with the motecontroller. Yo can perform this operation by:
 
  * Clicking on the Synchronize button
  * Push buttons 1 & 2 in your wiimote.
- * If synchronization was successful the syncronize button will now have the text "Synchronized OK" and the first led in your wiimote will be on.
+ * If synchronization was successful the syncronize button will now have "Synchronized OK" as text and the first led in your wiimote will be on.
  
 Now you can select with your mouse what application you want to control and start playing with your wiimote :)
 
